@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import ContactList from './components/ContactList';
+import { useEffect, useState } from 'react';
+import { ContactsContext } from './context/ContactContext';
+import { db } from './firebase';
+import { collection, query, onSnapshot } from 'firebase/firestore';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [contacts, setContacts] = useState([]);
+	useEffect(() => {
+		const q = query(collection(db, 'contacts'));
+		const unsub = onSnapshot(q, (querySnapshot) => {
+			const contactsObj = querySnapshot.docs[0].data();
+			setContacts(Object.values(contactsObj));
+		});
+		return () => unsub();
+	}, []);
+
+	return (
+		<ContactsContext.Provider value={contacts}>
+			<div className='App'>
+				<ContactList />
+			</div>
+		</ContactsContext.Provider>
+	);
 }
 
 export default App;
