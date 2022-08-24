@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/MyMessenger-React/static/css/main.c5918bb1.css",
+    "main.js": "/MyMessenger-React/static/js/main.030ee03d.js",
+    "static/media/emma.png": "/MyMessenger-React/static/media/emma.21cca4e3864a3aac8795.png",
+    "static/media/angelina.png": "/MyMessenger-React/static/media/angelina.1faa86a91a520a5f1b81.png",
+    "static/media/soul.png": "/MyMessenger-React/static/media/soul.6ef608aabb9fa76f2bca.png",
+    "static/media/chuck.png": "/MyMessenger-React/static/media/chuck.02620008b2388878cb25.png",
+    "static/media/jackie.png": "/MyMessenger-React/static/media/jackie.404f44bbb36c62fcbd2c.png",
+    "static/media/walter.png": "/MyMessenger-React/static/media/walter.87f06ed1c0a40e0822f5.png",
+    "static/media/person.png": "/MyMessenger-React/static/media/person.f240f607ac156834eb05.png",
+    "index.html": "/MyMessenger-React/index.html",
+    "main.c5918bb1.css.map": "/MyMessenger-React/static/css/main.c5918bb1.css.map",
+    "main.030ee03d.js.map": "/MyMessenger-React/static/js/main.030ee03d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5918bb1.css",
+    "static/js/main.030ee03d.js"
+  ]
+}
